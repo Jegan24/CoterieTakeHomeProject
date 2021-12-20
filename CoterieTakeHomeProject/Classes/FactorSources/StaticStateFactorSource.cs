@@ -1,9 +1,8 @@
-﻿using CoterieTakeHomeProject.Classes;
-
-namespace CoterieTakeHomeProject.Interfaces
+﻿namespace CoterieTakeHomeProject.Classes.FactorSources
 {
     /// <summary>
-    /// 
+    /// An implementation of <see cref="IFactorSource{T}"/> for <see cref="StateFactor"/>.
+    /// It is a hard coded/static implementation, and should not be considered a long term solution.
     /// </summary>
     public class StaticStateFactorSource : IFactorSource<StateFactor>
     {
@@ -30,10 +29,10 @@ namespace CoterieTakeHomeProject.Interfaces
             _factors[texasFactor.Name] = texasFactor;
         }
         /// <summary>
-        /// 
+        /// Retrieves a <see cref="StateFactor"/> for the given state abbreviation.
         /// </summary>
-        /// <param name="name"></param>
-        /// <returns></returns>
+        /// <param name="name">Values found in <see cref="Constants.States"/> will return the corresponding <see cref="StateFactor"/>, otherwise null.</param>
+        /// <returns>A <see cref="StateFactor"/> if found, otherwise null.</returns>
         /// <exception cref="ArgumentException"></exception>
         public StateFactor? GetFactor(string name)
         {

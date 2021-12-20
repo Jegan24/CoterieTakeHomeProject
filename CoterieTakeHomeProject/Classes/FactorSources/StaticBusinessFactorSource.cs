@@ -1,9 +1,8 @@
-﻿using CoterieTakeHomeProject.Classes;
-
-namespace CoterieTakeHomeProject.Interfaces
+﻿namespace CoterieTakeHomeProject.Classes.FactorSources
 {
     /// <summary>
-    /// 
+    /// An implementation of <see cref="IFactorSource{T}"/> for <see cref="BusinessFactor"/>.
+    /// It is a hard coded/static implementation, and should not be considered a long term solution.
     /// </summary>
     public class StaticBusinessFactorSource : IFactorSource<BusinessFactor>
     {
@@ -31,10 +30,10 @@ namespace CoterieTakeHomeProject.Interfaces
             _factors[programmerFactor.Name] = programmerFactor;
         }
         /// <summary>
-        /// 
+        /// Retrieves a <see cref="BusinessFactor"/> for the given business type.
         /// </summary>
-        /// <param name="name"></param>
-        /// <returns></returns>
+        /// <param name="name">Values found in <see cref="Constants.FactorNames"/> will return a corresponding <see cref="BusinessFactor"/>, otherwise null.</param>
+        /// <returns>A <see cref="BusinessFactor"/> if found, otherwise null.</returns>
         /// <exception cref="ArgumentException"></exception>
         public BusinessFactor? GetFactor(string name)
         {

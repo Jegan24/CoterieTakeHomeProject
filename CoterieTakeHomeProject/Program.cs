@@ -1,4 +1,8 @@
-using CoterieTakeHomeProject.Interfaces;
+global using CoterieTakeHomeProject.Classes;
+global using CoterieTakeHomeProject.Classes.Factors;
+global using CoterieTakeHomeProject.Classes.FactorSources;
+global using CoterieTakeHomeProject.Controllers;
+global using CoterieTakeHomeProject.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -1,5 +1,8 @@
 ﻿namespace CoterieTakeHomeProject.Classes
 {
+    /// <summary>
+    /// A static class, with organized subclasses, used to hold commonly used constant values.
+    /// </summary>
     public static class Constants
     {
         public static class FactorTypes
